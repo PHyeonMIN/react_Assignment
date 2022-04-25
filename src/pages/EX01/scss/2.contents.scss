@@ -1,0 +1,267 @@
+@import "mixin";
+
+.container {
+  @include widthHeight(480px, 100%);
+  @include flex(center, center, column);
+  margin: 0 auto;
+  position: relative;
+  .contentsHeader {
+    @include widthHeight(100%, 52px);
+    @include flex(center);
+    position: sticky;
+    top: 67px;
+    background-color: #fff;
+    z-index: 2;
+    border-right: 1px solid #c5c5c5;
+    border-left: 1px solid #c5c5c5;
+    .back {
+      @include widthHeight(40px, 40px);
+      background-color: #fff;
+      background-image: url("/img/EX01/icoBack-b.png");
+      background-size: 100%;
+      cursor: pointer;
+    }
+    .title {
+      @include flex(center, center);
+      @include widthHeight(100%, 100%);
+      @include font(normal, 18px, #202020);
+      font-weight: 600;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .commonTopWrap {
+    @include widthHeight(100%, 350px);
+    img {
+      @include widthHeight(100%, 100%);
+    }
+  }
+
+  .tabWrap {
+    @include widthHeight(100%, 40px);
+    @include flex(center, center, row);
+    background-color: #fb7964;
+    padding-top: 2px;
+    position: sticky;
+    top: 118px;
+    z-index: 2;
+    .btnAttend {
+      @include widthHeight(50%, 40px);
+      @include flex(center, center);
+      border-radius: 24px 12px 0 0;
+      background-color: #91313f;
+      cursor: pointer;
+    }
+    .btnRoul {
+      @include widthHeight(50%, 40px);
+      @include flex(center, center);
+      border-radius: 12px 24px 0 0;
+      background-color: #097b70;
+      cursor: pointer;
+    }
+    button {
+      img {
+        width: 89px;
+      }
+    }
+  }
+
+  .AttendTabWrap {
+    @include widthHeight(480px, auto);
+    @include flex(center, flex-start, column);
+    background-color: #91313f;
+    .topBanner {
+      @include widthHeight(480px, 272px);
+      position: relative;
+      img {
+        @include widthHeight(100%, 100%);
+        background-size: 100%;
+      }
+      button {
+        @include widthHeight(60%, 70px);
+        position: absolute;
+        left: 20%;
+        bottom: 0%;
+        border-radius: 100px;
+      }
+    }
+    .attendStatebox {
+      position: relative;
+      img {
+        width: 100%;
+      }
+      .attendStateList {
+        position: absolute;
+        left: 8%;
+        top: 57%;
+        @include flex(center, center);
+        width: 83%;
+        padding: 10px 0;
+        border-radius: 12px;
+        font-size: 16px;
+        letter-spacing: -0.5px;
+        text-align: center;
+        dt {
+          line-height: 100%;
+        }
+        dd {
+          line-height: 100%;
+          padding: 0 5px 0 2px;
+          font-weight: 600;
+        }
+      }
+    }
+    
+    .bonus_box {
+      @include widthHeight(100%, 283px);
+      position: relative;
+      img {
+        @include widthHeight(100%, 100%);
+        background-size: 100%;
+      }
+      button {
+        @include widthHeight(50%, 68px);
+        position: absolute;
+        right: 10%;
+        top: 62%;
+        border-radius: 100px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .rouletTab {
+    @include widthHeight(480px, auto);
+    @include flex(center, flex-start, column);
+    background-color: #097b70;
+    .topBanner {
+      @include widthHeight(100%, auto);
+      img {
+        @include widthHeight(100%, 250px);
+        background-size: 100%;
+      }
+
+      .couponBox {
+        @include flex(center, center);
+        padding: 0 16px;
+        box-sizing: border-box;
+        .couponCount {
+          @include widthHeight(50%, 100%);
+          position: relative;
+          img {
+            @include widthHeight(224px, 120px);
+            background-size: 100%;
+          }
+          p {
+            @include widthHeight(10px, auto);
+            @include flex(center, center);
+            position: absolute;
+            left: 18%;
+            bottom: 18%;
+            width: 64%;
+            @include font("SUIT", 32px, #161616);
+            font-weight: 600;
+            margin-right: 4px;
+            span {
+              @include font("SUIT", 16px, #161616);
+              font-weight: 500;
+              margin-top: 6px;
+            }
+          }
+        }
+      }
+
+      .buttonBox {
+        @include widthHeight(100%, auto);
+        @include flex(center, center, row);
+        padding: 3% 16px;
+        box-sizing: border-box;
+        button {
+          @include widthHeight(100%, 100%);
+          border-radius: 100px;
+          img {
+            @include widthHeight(219px, 38px);
+            background-size: 100%;
+          }
+          &:first-child {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+
+    .giftWinner {
+      @include widthHeight(100%, auto);
+      padding: 0 2% 20px 2%;
+      box-sizing: border-box;
+      background-color: #097b70;
+
+      .giftWinnerWrap {
+        overflow: hidden;
+        border-radius: 36px;
+        border: 4px solid #1f645e;
+
+        .giftWinnerBox {
+          @include flex();
+
+          label {
+            @include widthHeight(35%, 42px);
+            @include flex(center, center);
+            line-height: 40px;
+            text-align: cneter;
+            color: #fff;
+            background-color: #26bbad;
+            font-size: 14px;
+          }
+
+          .swiperWrap {
+            @include widthHeight(65%, 42px);
+            @include flex(center, center);
+            background-color: #fff;
+            .time {
+              max-width: 92px;
+              @include widthHeight(30%, 40px);
+              @include flex(center, flex-start);
+
+              @include font("SUIT", 14px, #757575);
+              letter-spacing: -1px;
+              font-weight: 500;
+
+              margin-left: 2%;
+            }
+            .nick-name {
+              @include widthHeight(70%, 40px);
+              @include flex(center, flex-start);
+              @include font("SUIT", 14px, #161616);
+              letter-spacing: -1px;
+            }
+          }
+        }
+      }
+    }
+
+    .rouletBox {
+      @include widthHeight(100%, auto);
+      position: relative;
+      background-image: url("/img/EX01/roulBackground.png");
+      background-size: 100%;
+      img {
+        &:first-child {
+          @include widthHeight(36px, 62px);
+          background-size: 100%;
+          position: absolute;
+          margin: 0 auto;
+          left: 0;
+          right: 0;
+        }
+        &:nth-child(2) {
+          @include widthHeight(100%, auto);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import "../scss/mixin";
+
+.Header {
+    @include widthHeight(100%, 52px);
+    @include flex(center);
+    position: sticky;
+    top: 67px;
+    background-color: #fff;
+    z-index: 2;
+
+    .back {
+      @include widthHeight(40px, 40px);
+      background-color: #fff;
+      background-image: url("/img/EX01/icoBack-b.png");
+      background-size: 100%;
+      cursor: pointer;
+    }
+    .title {
+      @include flex(center, center);
+      @include widthHeight(100%, 100%);
+      @include font(normal, 18px, #202020);
+      font-weight: 600;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }

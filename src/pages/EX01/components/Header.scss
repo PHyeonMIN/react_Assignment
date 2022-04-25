@@ -1,0 +1,117 @@
+@import "../scss/setting";
+@import "../scss/mixin";
+
+.GNB {
+  min-width: 480px;
+  @include widthHeight(100%, 66px);
+  @include flex(center, center, row);
+  border-bottom: 1px solid #c5c5c5;
+  background-color: #fff;
+  position: sticky;
+  z-index: 2;
+  top: 0;
+
+  .GNBWrap {
+    @include widthHeight(100%, 100%);
+    @include flex(center, space-evenly, row);
+    .logoIconWrap {
+      @include widthHeight(33%, 100%);
+      @include flex(center, center);
+      .logoIcon {
+        @include widthHeight(86px, 30px);
+
+        background-image: url("/img/EX01/logo.png");
+        background-size: 100%;
+        cursor: pointer;
+      }
+    }
+
+    .center {
+      @include widthHeight(33%, auto);
+      @include flex(center, space-evenly, row);
+
+      div {
+        @include widthHeight(52px, 52px);
+        background-size: 100%;
+        &.liveIcon {
+          background-image: url("/img/EX01/live.png");
+        }
+        &.musicIcon {
+          background-image: url("/img/EX01/gnbClip-off.png");
+        }
+        &.searchIcon {
+          background-image: url("/img/EX01/gnbSearch-off.png");
+        }
+        &.rankIcon {
+          background-image: url("/img/EX01/gnbRank-off.png");
+        }
+      }
+    }
+
+    .right {
+      @include widthHeight(33%, auto);
+      @include flex(center, center, row);
+
+      div {
+        @include widthHeight(44px, 44px);
+        position: relative;
+        background-size: 100%;
+        &.personIcon {
+          background-image: url("/img/EX01/gnbMy-off.png");
+        }
+        &.talkIcon {
+          background-image: url("/img/EX01/gnbMail-off.png");
+        }    
+        &.storeIcon {
+          background-image: url("/img/EX01/gnbStore-off.png");
+          position: relative;
+          .saleStore {
+            position: absolute;
+            left: 10%;
+            bottom: 0px;
+            @include flex(center,center);
+            height: 16px;
+            padding:0 11%;
+            @include font(normal, 11px, #fff);
+            background-color: #FF1919;
+            font-weight: 700;
+            border-radius: 100px;
+          }
+        }
+        &.noticeIcon {
+          background-image: url("/img/EX01/gnbAllim-off.png");
+        }
+        &.active {
+          &::after{
+            content: '';
+            @include widthHeight(8px,8px);
+            position: absolute;
+            top:4px;
+            right: 4px;
+            background-color: #FF3C7B;
+            border-radius: 50%;
+
+          }
+        }
+      }
+      .createBtn {
+        background-color: transparent;
+        width: 114px;
+        line-height: 34px;
+        @include flex(center, center);
+        border: 1px solid #d9d9d8;
+        border-radius: 2px;
+        @include font(normal, 14px, #161616);
+        cursor: pointer;
+        &::before {
+          content: "+";
+          @include widthHeight(10px, 10px);
+          display: inline-block;
+          line-height: 10px;
+          margin-right: 4px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import "../scss/mixin";
+
+.faqSection {
+  width: 100%;
+  @include flex(flex-start, flex-start, column);
+  position: relative;
+
+  .faqTitle {
+    width: 100%;
+    @include flex(center, flex-start);
+    @include font("SUIT", 16px, #202020);
+    line-height: 26px;
+    font-weight: 700;
+    padding: 12px 16px;
+    box-sizing: border-box;
+  }
+}

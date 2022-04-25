@@ -1,0 +1,62 @@
+@import "../scss/mixin";
+
+.faqListWrap {
+  @include widthHeight(100%, auto);
+  @include flex($direction: column);
+  cursor: pointer;
+  .faqList {
+    @include widthHeight(100%, auto);
+    @include flex($direction: row);
+    padding: 12px 16px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #f2f2f2;
+
+    .qmark {
+      @include font("SUIT", 15px, #ff3c7b);
+      font-weight: 700;
+      line-height: 25px;
+      margin-right: 8px;
+    }
+    .question {
+      flex: 1;
+      @include font("SUIT", 15px, #303030);
+      font-weight: 500;
+      line-height: 25px;
+      letter-spacing: -1px;
+      overflow: hidden;
+      margin-right: 20px;
+    }
+    .arrow {
+      @include widthHeight(20px, 20px);
+      background-size: 100%;
+      &.down {
+        background-image: url("/img/EX02/arrow.png");
+      }
+      &.up {
+        background-image: url("/img/EX02/arrow2.png");
+      }
+    }
+  }
+  .answerArea {
+    @include widthHeight(100%, auto);
+    position: relative;
+    padding: 15px 16px 15px 35px;
+    background-color: #f6f6f6;
+    box-sizing: border-box;
+    @include font("SUIT", 14px, #303030);
+    line-height: 25px;
+    font-weight: 400;
+    letter-spacing: -1px;
+
+    &::before {
+      content: "A";
+      position: absolute;
+      top: 15px;
+      left: 16px;
+      line-height: 25px;
+      margin-right: 8px;
+      @include font("SUIT", 15px, #666);
+      font-weight: 700;
+    }
+  }
+}

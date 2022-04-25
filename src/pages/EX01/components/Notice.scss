@@ -1,0 +1,47 @@
+@import "../scss/mixin";
+
+.noticeWrap {
+  @include widthHeight(100%, 100%);
+  @include flex($direction: column);
+  padding: 5% 5% 10% 5%;
+  box-sizing: border-box;
+  .noticeTitle {
+    @include flex(center, flex-start);
+    @include font(normal, 16px, #fff8df);
+    font-weight: 600;
+    padding-bottom: 600;
+    img {
+      margin-left: 8px;
+    }
+    &.active {
+      img {
+        margin-top: 6px;
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .noticeList {
+    ul {
+      li {
+        @include font("SUIT", 12px, #fff);
+        line-height: 18px;
+        letter-spacing: -0.33px;
+        text-align: left;
+
+        position: relative;
+        padding: 4px 0 6px 10px;
+
+        white-space: pre-line;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 11px;
+          left: 0;
+          @include widthHeight(1px, 1px);
+          background-color: #fff;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

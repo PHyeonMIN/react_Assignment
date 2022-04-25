@@ -1,0 +1,44 @@
+@import '../scss/mixin';
+
+.stampBoxWrap {
+    @include widthHeight(100%, 100%);
+    padding: 14px 0;
+
+    .stampBox {
+      background-image: url("/img/EX01/checkEventImg.png");
+      background-size: 100%;
+
+      @include flex(center, center, row);
+      flex-wrap: wrap;
+      padding: 14% 5% 2% 5%;
+      .stampBoxItem {
+        width: 22%;
+        position: relative;
+        padding: 0 5px;
+        margin-bottom: 3%;
+
+        img {
+          width: 100%;
+          background-size: 100%;
+        }
+        .stampBoxDate {
+          position: absolute;
+          top: 34%;
+          width: 90%;
+          text-align: center;
+          font-size: 12px;
+          color: #8c8a8a;
+        }
+        .stampBoxExp {
+          position: absolute;
+          bottom: 10%;
+          width: 90%;
+          text-align: center;
+          font-size: 11px;
+          letter-spacing: -0.5px;
+          font-size: 12px;
+          color: #8c8a8a;
+        }
+      }
+    }
+  }
